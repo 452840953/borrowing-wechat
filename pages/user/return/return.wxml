@@ -1,0 +1,68 @@
+<view class="weui-panel public-diary" style="margin-top:0px">
+  <view class="weui-panel__hd">
+  <image class="logo" src="/images/icon/smile-colored.png"></image>借阅详情</view>
+  <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_text">
+        <image src="http://localhost:8088/{{img}}" style="width:100px;height:130px"></image>
+        <view class="weui-media-box__title weui-media-box__title_in-text">书名：{{item.book.name}}</view>
+        <view class="weui-media-box__desc">作者：{{item.book.ct}}</view>
+        <view class="weui-media-box__desc">借阅号：{{item.book.img}}{{item.borrowing.id}}</view>
+        <view class="weui-media-box__desc">借阅日期：{{item.borrowing.ct}}</view>
+        <view class="weui-media-box__desc">归还日期：{{item.borrowing.rd}}</view>
+        <view class="weui-media-box__desc">{{item.book.intro}}</view>
+        <view class="weui-media-box__info">
+          <view class="weui-media-box__info__meta">{{item.borrowing.status}}</view>
+        </view>
+      </view>
+  </view>
+  <!-- <view class="weui-panel__ft">
+    <view class="weui-cell weui-cell_access weui-cell_link">
+      <view class="weui-cell__bd">查看更多</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+  </view> -->
+</view>
+
+<view class="lists">
+  <view class="lists-item" wx:if="{{hasWebUserInfo}}">
+    <view class="weui-cells__title"> </view>
+    <view class="weui-cells weui-cells_after-title">
+      <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="lent" data-bookid="{{item.id}}" data-stuid="{{webUserInfo.id}}">
+        <view class="weui-cell__hd">
+          <span class="iconfont icon-file-text" style="margin-right: 16px;vertical-align: middle;font-size:40rpx;color:#aa5500"></span>
+        </view>
+        <view class="weui-cell__bd">我要归还</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+    </view>
+  </view>
+</view>
+
+<view class="lists">
+  <view class="lists-item" wx:if="{{hasWebUserInfo}}">
+    <view class="weui-cells__title"> </view>
+    <view class="weui-cells weui-cells_after-title">
+      <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="showDialogBtn" data-bookid="{{item.borrowing.id}}" data-stuid="{{webUserInfo.id}}">
+        <view class="weui-cell__hd">
+          <span class="iconfont icon-file-text" style="margin-right: 16px;vertical-align: middle;font-size:40rpx;color:#aa5500"></span>
+        </view>
+        <view class="weui-cell__bd">我要续借</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+    </view>
+  </view>
+</view>
+
+
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view> 
+<view class="modal-dialog" wx:if = "{{showModal}}" > <view class = "modal-title"> 最晚归还日期 </view>
+<view class="modal-content">
+<view class="modal-input">
+<input placeholder-class="input-holder" value="{{time}}" type="text" disabled="true" maxlength="10" class="input" placeholder="xxxx-xx-xx"></input> </view>
+</view> 
+<view class="modal-footer"> 
+<view class="btn-cancel" bindtap ="onCancel" data-status="cancel">取消</view>
+<view class="btn-confirm" bindtap="xujie" data-status="confirm" data-bookid="{{item.id}}" data-stuid="{{webUserInfo.id}}">确定</view> 
+</view>
+</view> 

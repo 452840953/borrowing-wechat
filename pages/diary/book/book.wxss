@@ -1,0 +1,109 @@
+/* 礼品列表 */
+.giftListView {
+  width: 100%;
+  bottom: 0;
+  top: 500rpx;
+  /* background-color: red; */
+}
+/* cell */
+.item {
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+  /* background-color: green; */
+    border-bottom: 1px solid #dadada;
+ 
+}
+/* cell 产品图 */
+.iconImageView {
+  width: 200rpx;
+  height: 200rpx;
+  top: 50rpx;
+  left: 40rpx;
+  /* background-color:orange; */
+  position: absolute;
+}
+.iconImage {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+/* 产品名 */
+.productNameView {
+  top: 50rpx;
+  left: 280rpx;
+  right: 130rpx;
+  height: 50rpx;
+  position: absolute;
+}
+.productNameText {
+  color: rgb(32, 27, 27);
+  font-size: 35rpx;
+  white-space: nowrap;
+    text-overflow:ellipsis;
+}
+
+/* 需要积分数 */
+.needScoreView {
+  top: 50rpx;
+  right: 10rpx;
+  height: 50rpx;
+  width: 100rpx;
+  position: absolute;
+}
+.needSocreText {
+  color: rgb(230, 204, 140);
+  font-size: 25rpx;
+}
+
+/* 具体产品 */
+.productDesView {
+  top: 120rpx;
+  height: 50rpx;
+  left: 280rpx;
+  right: 20rpx;
+  /* background-color: gray; */
+  position: absolute;
+}
+.productDesView1 {
+  top: 170rpx;
+  height: 50rpx;
+  left: 280rpx;
+  right: 20rpx;
+  /* background-color: gray; */
+  position: absolute;
+}
+.productDesView2 {
+  top: 220rpx;
+  height: 50rpx;
+  left: 280rpx;
+  right: 20rpx;
+  /* background-color: gray; */
+  position: absolute;
+}
+.productDesText {
+  font-size: 32rpx;
+  color: gray;
+  display: block;
+  /* line-height: 50rpx; */
+   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+   /* -webkit-line-clamp:1;  */
+}
+
+/* 剩余数 */
+/* .numView {
+  top: 190rpx;
+  height: 50rpx;
+  left: 280rpx;
+  right: 150rpx;
+  position:absolute;
+}
+.numText {
+  font-size: 25rpx;
+  color: rgb(230, 204, 140);
+   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+} */

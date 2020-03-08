@@ -1,0 +1,32 @@
+<!-- 礼品列表 -->
+<mp-searchbar placeholder="图书" bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+
+<view class='giftListView'>
+ <block wx:for="{{items}}">
+
+ <!-- 每个cell -->
+ <navigator url="../info/info?id={{item.book.id}}">
+  <view class='item' wx:key="{{item.book.id}}" data-item= "{{item}}" data-sid="{{item.book.id}}" data-id="{{item.book.id}}" >
+    <!-- 产品图片 -->
+   <view class='iconImageView'>
+    <image class='iconImage' src="http://localhost:8088/{{item.book.img}}" mode = 'aspectFit'></image>
+   </view>
+   <!-- 产品名称 -->
+   <view class='productNameView'>
+    <text class='productNameText'>{{item.name}}</text>
+   </view>
+   <!-- 具体产品 -->
+   <view class='productDesView'>
+    <text class = 'productDesText'>作者：{{item.ct}}</text>
+   </view>
+     <view class='productDesView1'>
+    <text class = 'productDesText'>馆藏：{{item.gc}}</text>
+   </view>
+   <view class='productDesView2'>
+    <text class = 'productDesText'>可借：{{item.kj}}</text>
+   </view>
+ 
+  </view>
+  </navigator>
+ </block>
+</view>

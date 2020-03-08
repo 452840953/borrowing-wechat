@@ -1,0 +1,54 @@
+<!--pages/index3/index3.wxml-->
+
+<view class="poster" style="background-image: url('../../images/poster.jpg')">
+  <text class="headline">i阅读</text>
+</view>
+<view class="weui-panel public-diary">
+  <view class="weui-panel__hd">
+  <image class="logo" src="/images/icon/smile-colored.png"></image>最新书目</view>
+  <scroll-view class="image-group" style="height:180px" scroll-x="true">
+      <block wx:for="{{book}}">
+       <navigator style="display:inline-block;" url="../diary/info/info?id={{item.id}}">
+        <view style="width:105px;display:inline-block;margin:5px">
+          <image src="http://localhost:8088/{{item.img}}" style="width:100px;height:130px;"></image>
+          <text style="display:block;font-size:10px">{{item.name}}</text>
+          </view>
+          </navigator>
+      </block>
+  </scroll-view>
+  <!-- <view class="weui-panel__ft">
+    <view class="weui-cell weui-cell_access weui-cell_link">
+      <view class="weui-cell__bd">查看更多</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+  </view> -->
+</view>
+<view class="weui-panel public-diary">
+  <view class="weui-panel__hd">
+  <image class="logo" src="/images/icon/smile-colored.png"></image>公告</view>
+  <view class="weui-panel__bd">
+    <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{notice}}" wx:for-itme="item">
+      <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text">{{item.title}}</view>
+        <view class="weui-media-box__desc">{{item.info}}</view>
+        <view class="weui-media-box__info">
+          <view class="weui-media-box__info__meta">管理员</view>
+          <view class="weui-media-box__info__meta">{{item.ut}}</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <!-- <view class="weui-panel__ft">
+    <view class="weui-cell weui-cell_access weui-cell_link">
+      <view class="weui-cell__bd">查看更多</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+  </view> -->
+</view>
+
+<view class="weui-footer footer">
+  <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">图书借阅首页</navigator>
+  </view>
+  <view class="weui-footer__text">Copyright © 2020 毕业设计</view>
+</view>

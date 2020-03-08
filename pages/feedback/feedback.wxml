@@ -1,0 +1,40 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__hd">
+        <view class="page__title">反馈</view>
+        <view class="page__desc">帮助i阅读做得更好</view>
+    </view>
+    <view class="page__bd">
+ 
+
+        <view class="weui-cells__title">联系方式</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd" style="width: 105px">
+                    <picker bindchange="bindWayChange" value="{{wayIndex}}" range="{{way}}">
+                        <view class="weui-select">{{way[wayIndex]}}</view>
+                    </picker>
+                </view>
+                <view class="weui-cell__bd weui-cell__bd_in-select-before">
+                    <input class="weui-input" bindinput="contract" placeholder="{{tips[wayIndex]}}" />
+                </view>
+            </view>
+        </view>
+
+
+        <view class="weui-cells__title">反馈内容</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" bindinput="info" placeholder="感谢您的反馈，我们会积极改进!" style="height: 8.3em" />
+                    <view class="weui-textarea-counter">0/200</view>
+                </view>
+            </view>
+        </view>
+
+
+
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="showTopTips">提交</button>
+        </view>
+    </view>
+</view>

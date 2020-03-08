@@ -1,0 +1,33 @@
+<!-- 礼品列表 -->
+<mp-searchbar placeholder="图书" bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+
+<view class='giftListView'>
+ <block wx:for="{{items}}">
+ <!-- 每个cell -->
+ <navigator url="../lent/lent?id={{item.id}}">
+  <view class='item' wx:key="{{item.id}}" data-item= "{{item}}" data-sid="{{item.id}}" data-id="{{item.id}}" >
+
+   <!-- 产品名称 -->
+   <view class='productNameView'>
+    <text class='productNameText'>{{item.name}}</text>
+   </view>
+
+   <!-- 需要的积分 -->
+   <view class='needScoreView'>
+    <text class='needSocreText'>[{{item.status}}]</text>
+   </view>
+   
+   <!-- 具体产品 -->
+   <view class='productDesView'>
+    <text class = 'productDesText'>{{item.ct}}</text>
+   </view>
+  
+  <!-- 剩余数量 -->
+  <!-- <view class='numView'>
+   <text class='numText'>剩余{{item.SurplusNum}}份</text>
+  </view> -->
+
+  </view>
+  </navigator>
+ </block>
+</view>

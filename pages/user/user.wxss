@@ -1,0 +1,32 @@
+/* pages/user/user.wxss */
+
+page{
+  background: #fafafa;
+}
+.userInfo{
+  padding: 50rpx;
+}
+.portrait{
+  display: inline-block;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius:150rpx; 
+  border: black 1px solid;
+  vertical-align: top;
+}
+.alert{
+  margin-left:50rpx;
+  padding-top: 20rpx;
+  font-size: 40rpx;
+  line-height: 150rpx;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.lists{
+  min-height: 70vh;
+}
+
+.hover{
+  background: #cccccc;
+}

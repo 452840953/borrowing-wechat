@@ -1,0 +1,64 @@
+/* pages/diary/new/new.wxss */
+.editor{
+	position: absolute;
+	background: white;
+  padding: 30rpx;
+	padding-bottom: 4em;
+	z-index: 0;
+}
+.headinput{
+	background: white;
+  padding: 30rpx;
+  padding-right: 100px;
+  height: 60rpx;
+  font-weight: bold;
+  font-size: 50rpx;
+  position: relative;
+}
+.headline{
+  font-weight: bold;
+  font-size: 50rpx;
+}
+
+.press{
+	position: absolute;
+	display: block;
+	right: 20rpx;
+	top: 30rpx;
+}
+
+page{
+  background:white;
+}
+.weui-textarea-counter{
+	position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1em 20rpx;
+  box-sizing: border-box;
+	background: white;
+	z-index: 100;
+}
+
+
+.setpublic{
+	color: black;
+	padding: 5rpx 10rpx;
+	border-radius: 20rpx; 
+	background: #f1f1f1;
+}
+.setlocation{
+	color: black;
+	padding: 5rpx 10rpx;
+	border-radius: 20rpx; 
+	background: #f1f1f1;
+}
+
+.fl{
+	float: left;
+}
+
+.fl view{
+	display: inline-block;
+	margin-right: 15rpx;
+}

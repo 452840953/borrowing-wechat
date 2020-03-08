@@ -1,0 +1,78 @@
+<!--pages/user/user.wxml-->
+<navigator url="{{jumpto}}">
+<view class="userInfo" hover-class="hover">
+<image class="portrait" src="{{portraitUrl}}"></image>
+<text class="alert" wx:if="{{!hasWebUserInfo}}">登录</text>
+<text class="alert" wx:else>{{webUserInfo.school}}</text>
+</view>
+</navigator>
+
+<view class="lists">
+  <view class="lists-item" wx:if="{{hasWebUserInfo}}">
+    <view class="weui-cells__title"> </view>
+    <view class="weui-cells weui-cells_after-title">
+    <navigator url="/pages/user/info/info" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <span class="iconfont icon-idcard" style="margin-right: 16px;vertical-align: middle;font-size:40rpx;color:#22bb00"></span>
+        </view>
+        <view class="weui-cell__bd">个人信息</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="borrowing/borrowing" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <span class="iconfont icon-file-text" style="margin-right: 16px;vertical-align: middle;font-size:40rpx;color:#aa5500"></span>
+        </view>
+        <view class="weui-cell__bd">我的借阅</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="borrowing/yuyue" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <span class="iconfont icon-plus-square" style="margin-right: 16px;vertical-align: middle;font-size:40rpx;color:#aa5500"></span>
+        </view>
+        <view class="weui-cell__bd">我的预约</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="borrowing/collect" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <span class="iconfont icon-like" style="margin-right: 16px;vertical-align: middle;font-size:40rpx;color:#aa5500"></span>
+        </view>
+        <view class="weui-cell__bd">我的收藏</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="/pages/feedback/feedback" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <span class="iconfont icon-edit-square" style="margin-right: 16px;vertical-align: middle;font-size:40rpx;color:#006633"></span>
+        </view>
+        <view class="weui-cell__bd">反馈</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="lists-item">
+    <view class="weui-cells__title"> </view>
+    <view class="weui-cells weui-cells_after-title">
+      <!-- <navigator url="/pages/feedback/feedback" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <span class="iconfont icon-edit-square" style="margin-right: 16px;vertical-align: middle;font-size:40rpx;color:#006633"></span>
+        </view>
+        <view class="weui-cell__bd">反馈</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+          <span class="iconfont icon-info-circle" style="margin-right: 16px;vertical-align: middle;font-size:40rpx;color:#0099ff"></span>
+        </view>
+        <view class="weui-cell__bd">关于</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator> -->
+    </view>
+  </view>
+            <button class="weui-btn" type="primary" style="background-color:#0094ff;margin-top:20px" bindtap="toLogout" wx:if="{{hasWebUserInfo}}">退出登录</button>
+
+</view>
+<view class="weui-footer footer">
+  <view class="weui-footer__links">
+  </view>
+  <view class="weui-footer__text">毕业设计 © 2020 </view>
+</view>

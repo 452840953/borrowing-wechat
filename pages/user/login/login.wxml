@@ -1,0 +1,37 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__hd" style="background-image: url('../../../images/poster.jpg')">
+    <view class="content">
+        <view class="page__title">用户登录 </view>
+    </view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">错误提示</view>
+        <view class="weui-cells__title">登录</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell ">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">学号</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入学号" bindinput="setName"/>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">密码</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" type="password" placeholder="请输入密码" bindinput="setPassword"/>
+                </view>
+            
+            </view>
+            
+        </view>
+        <!-- <view class="weui-cells__tips" bindtap="toRegister">没有账号？点击注册</view> -->
+
+
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="checkLogin"  style="background-color:#0094ff">确定</button>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/diary/new/new.wxml-->
+
+
+<view>
+  <input placeholder="请输入标题" placeholder-class="headline" class="headinput"></input>
+</view>
+<button class="weui-btn mini-btn press" type="default" size="mini">发表</button>
+  <textarea class="weui-textarea editor" placeholder="请输入正文" auto-height="true" maxlength="{{maxLength}}" bindinput="updateInput"/>
+  <view class="weui-textarea-counter"> 
+	<view class="fl">
+		<view class="setpublic" bindtap="changePublic"><span class="iconfont {{publicIconClass}}" style="color:#008B8B"></span> {{publicString}}</view>
+		<view class="setlocation"><span class="iconfont icon-location-fill" style="color:#008B8B"></span> 添加地点</view>
+	</view>
+
+	{{texts}}/{{maxLength}}
+  </view>
+  
+
+
+

@@ -1,0 +1,31 @@
+
+.page__hd{
+background-size: cover;
+}
+.page__title{
+  margin-bottom: 20rpx;
+}
+.content{
+  color: #eeeeee;
+}
+.wechat-login{
+  background: white;
+  padding: 15rpx;
+  width: 120rpx;
+  position: fixed;
+  right: 30rpx;
+  bottom: 50rpx;
+  border: #11e611 1px solid;
+  border-radius: 10px;
+}
+.wechat-logo{
+  width: 100%;
+}
+.wechat-text{
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #0fb30f;
+  font-size: 28rpx;
+}
+

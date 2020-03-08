@@ -1,0 +1,5 @@
+/* pages/user/info/info.wxss */
+.portrait{
+  width: 100rpx;
+
+}

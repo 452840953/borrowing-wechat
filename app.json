@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index3/index3",
+    "pages/user/info/info",
+    "pages/diary/new/new",
+    "pages/diary/book/book",
+    "pages/feedback/feedback",
+    "pages/user/login/login",
+    "pages/user/register/register",
+    "pages/user/user",
+    "pages/index2/index2",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/diary/info/info",
+    "pages/user/borrowing/borrowing",
+    "pages/user/return/return",
+    "pages/user/change/change",
+    "pages/user/borrowing/yuyue",
+    "pages/user/lent/lent",
+    "pages/user/borrowing/collect"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0094ff",
+    "navigationBarTitleText": "i阅读",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#eee"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#0094ff",
+    "list": [
+      {
+        "pagePath": "pages/index3/index3",
+        "text": "主页",
+        "iconPath": "/images/icon/home.png",
+        "selectedIconPath": "/images/icon/home-colored.png"
+      },
+      {
+        "pagePath": "pages/diary/book/book",
+        "text": "馆藏",
+        "iconPath": "/images/icon/file-add.png",
+        "selectedIconPath": "/images/icon/file-add-colored.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/icon/user.png",
+        "selectedIconPath": "/images/icon/user-colored.png"
+      }
+    ]
+  },
+  "style": "v2"
+}

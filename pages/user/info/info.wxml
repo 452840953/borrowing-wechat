@@ -1,0 +1,22 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-cells weui-cells_after-title">
+        <navigator url="/pages/user/change/change?item=school&value={{item.school}}&itemfiled=用户名" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">用户名</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{item.school}}</view>
+            </navigator>
+            <navigator url="/pages/user/change/change?item=ct&value={{item.ct}}&itemfiled=邮箱" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">邮箱</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{item.ct}}</view>
+            </navigator>
+              <navigator url="/pages/user/change/change?item=ut&value={{item.ut}}&itemfiled=密码" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">修改密码</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">学号（已认证）</view>
+                <view class="">{{item.name}}</view>
+            </navigator>
+        </view>
+    </view>
+</view>
